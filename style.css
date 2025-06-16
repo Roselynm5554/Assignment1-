@@ -1,0 +1,12 @@
+body{
+  padding: 25px;
+  background-color:lightblue ;
+  text-align: center ;
+  
+  img {
+    width: 400px ;
+}
+}
+.title {
+	color: #5C6AC4;
+}
