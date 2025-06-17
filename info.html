@@ -1,25 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Save the animals</title>
-    <!-- tells the browser to load an external CSS file called styles.css and apply the styles it contains to the HTML page. -->
-    <link rel="stylesheet" href="style1.css" /> 
-</head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How You Can Help - Rescue NYC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="theme.css" rel="stylesheet"/>
+</head>
 <body>
-    <img src="https://newsfeed.time.com/wp-content/uploads/sites/9/2012/08/2012-08-14t115243z_10871317.jpg?w=720&h=480&crop=1"> 
-<p>Animals are an important part of life on Earth. They help keep nature balanced bees pollinate plants, birds 
-    spread seeds, and predators keep other animal populations in check. If animals go extinct, it can damage the whole food chain and even affect humans.
-     For example, without bees, we wouldnt have many fruits or vegetables. Some animals also provide medicine, clothes, or other resources. But beyond that, 
-     animals have a right to live, just like we do. Many species are going extinct because of pollution, climate change, and hunting. 
-     If we care now, we can protect them and make sure future generations get to enjoy the beauty and benefits of animals too. </p>
-     <h1>What are some of the things you can do to help out?</h1>
-     <ol>
-          <li>Reduce, Reuse, Recycle  Using less plastic and recycling helps keep oceans and forests clean, so animals dont get hurt or lose their homes  </li>
-          <li>Support Wildlife Charities  You can donate, volunteer, or spread the word about groups that protect endangered animals and their habitats</li>
-          <li> Buy Sustainable Products  Choose items that dont harm the environment, like paper from recycled materials or food thats farmed in eco-friendly ways</li>
-           <li>Speak Up and Educate Others  Tell your friends, family, or classmates why animals matter. The more people who care, the more change we can make together</li>
-     </ol>
-<a href="https://cuddly.com/">Lern more</a>
-</p>
-    </body>   
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Rescue NYC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="info.html">Info</a></li>
+          <li class="nav-item"><a class="nav-link" href="Location.html">Locations</a></li>
+        </ul>
+        <button id="themeToggle" class="btn btn-outline-light btn-sm">Toggle Mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mb-5">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <img src="https://newsfeed.time.com/wp-content/uploads/sites/9/2012/08/2012-08-14t115243z_10871317.jpg?w=720&h=480&crop=1" 
+             alt="Animals matter" class="img-fluid w-100 h-100 object-fit-cover">
+      </div>
+
+      <div class="col-md-6 position-relative" style="min-height: 320px; background-image: url('https://storage.cuddly.app/cdn-cgi/image/format=webp,quality=75/home-page/fundraising-steps-1.png'); background-size: cover; background-position: center;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" 
+             style="background-color: rgba(230, 243, 255, 0.85);">
+          <div class="text-center px-4">
+            <h2 class="mb-3" style="color: #007bff;">Here’s the #1 fundraising program for animal welfare</h2>
+            <a href="https://cuddly.com/" class="btn btn-warning btn-lg px-4">Donate Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-5" style="color: #007bff;">Why Animals Matter</h1>
+      <p class="fs-5">
+        Animals are vital to our planet's ecosystems and our own wellbeing. They bring balance to nature, pollinate plants, reduce stress, and even save lives.
+        Yet every day, animals suffer from abandonment, neglect, and environmental harm. We believe every creature deserves safety, care, and love.
+      </p>
+    </div>
+
+    <div class="mb-5">
+      <h2 class="text-center mb-4" style="color: #007bff;">Ways You Can Help</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card text-center shadow-sm h-100 border-info">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Recycle Smarter</h5>
+              <p class="card-text">Clean habitats protect animals. Use fewer plastics and recycle responsibly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card text-center shadow-sm h-100 border-primary">
+            <div class="card-body">
+              <h5 class="card-title text-info">Support a Shelter</h5>
+              <p class="card-text">Give to rescues. Help feed, house, and heal abandoned pets.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card text-center shadow-sm h-100 border-warning">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Shop Kind</h5>
+              <p class="card-text">Choose eco-friendly and cruelty-free products to reduce harm.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card text-center shadow-sm h-100 border-secondary">
+            <div class="card-body">
+              <h5 class="card-title text-secondary">Speak Up</h5>
+              <p class="card-text">Educate and advocate—your voice can drive awareness and change.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center my-4">
+      <p class="fs-6">
+        Want to visit or volunteer? <a href="Location.html" class="text-decoration-underline" style="color: #007bff;">See rescue locations in NYC</a>
+      </p>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light text-center py-3">
+    <small>&copy; 2025 Rescue NYC. All rights reserved. | <a href="mailto:contact@rescuenyc.org" class="text-light text-decoration-underline">Email Us</a></small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("themeToggle");
+      function setTheme(mode) {
+        document.body.classList.toggle("dark-mode", mode === "dark");
+        localStorage.setItem("theme", mode);
+      }
+      const savedTheme = localStorage.getItem("theme") || "light";
+      setTheme(savedTheme);
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          const newTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+          setTheme(newTheme);
+        });
+      }
+    });
+  </script>
+</body>
 </html>

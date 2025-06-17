@@ -3,93 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rescues in New York City</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    body {
-      background-color: #f8f9fa;
-      padding: 2rem;
-    }
-
-    h1 {
-      margin-bottom: 2rem;
-      color: #343a40;
-    }
-
-    iframe {
-      border-radius: 8px;
-    }
-
-    .location-card {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1rem;
-    }
-
-    .map-col {
-      min-width: 280px;
-    }
-  </style>
+  <title>Rescue Locations - Rescue NYC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="theme.css" rel="stylesheet"/>
 </head>
-<body>
-  <div class="container">
-    <h1 class="text-center">Rescues in New York City</h1>
+<body class="locations-page">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Rescue NYC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="info.html">Info</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Location.html">Locations</a></li>
+        </ul>
+        <button id="themeToggle" class="btn btn-outline-light btn-sm">Toggle Mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mb-5">
+    <h1 class="text-center mb-4" style="color: #007bff;">Rescue Locations in NYC</h1>
+
+    <div class="mb-4 text-center">
+      <div class="btn-group" role="group">
+        <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="brooklyn">Brooklyn</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="queens">Queens</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="manhattan">Manhattan</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="bronx">Bronx</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="staten">Staten Island</button>
+      </div>
+    </div>
 
     <div class="row">
-      
       <div class="col-md-8">
-        <div class="location-card">
-          <h2>Rescues in Brooklyn</h2>
-          <p><strong>Location:</strong> 123 Hope Ave, Brooklyn, NY</p>
-          <p><strong>Hours:</strong> Mon–Fri 10am–6pm</p>
+        <div class="location-card mb-4 p-3 rounded shadow-sm bg-light" data-borough="brooklyn">
+          <h3>Brooklyn</h3>
+          <ul>
+            <li><strong>Brooklyn Animal Rescue Coalition</strong><br>253 Wythe Ave, Brooklyn, NY 11249</li>
+            <li><strong>Sean Casey Animal Rescue</strong><br>153 E 3rd St, Brooklyn, NY 11218</li>
+            <li><strong>Hearts & Bones Rescue</strong><br>123 Rescue Way, Brooklyn, NY 11201</li>
+          </ul>
         </div>
-
-        <div class="location-card">
-          <h2>Rescues in Queens</h2>
-          <p><strong>Location:</strong> 456 Paw Blvd, Queens, NY</p>
-          <p><strong>Hours:</strong> Mon–Sat 9am–5pm</p>
+        <div class="location-card mb-4 p-3 rounded shadow-sm bg-light" data-borough="queens">
+          <h3>Queens</h3>
+          <ul>
+            <li><strong>Bobbi and the Strays</strong><br>80-36 Cooper Ave, Glendale, NY 11385</li>
+            <li><strong>Heavenly Angels Animal Rescue</strong><br>97-30 91st St, Ozone Park, NY 11416</li>
+          </ul>
         </div>
-
-        <div class="location-card">
-          <h2>Rescues in Manhattan</h2>
-          <p><strong>Location:</strong> 789 Rescue Rd, Manhattan, NY</p>
-          <p><strong>Hours:</strong> Every day 10am–4pm</p>
+        <div class="location-card mb-4 p-3 rounded shadow-sm bg-light" data-borough="manhattan">
+          <h3>Manhattan</h3>
+          <ul>
+            <li><strong>Animal Haven</strong><br>200 Centre St, New York, NY 10013</li>
+            <li><strong>Best Friends Lifesaving Center</strong><br>307 W Broadway, New York, NY 10013</li>
+          </ul>
         </div>
-
-        <div class="location-card">
-          <h2>Rescues in Bronx</h2>
-          <p><strong>Location:</strong> 321 Bark Ln, Bronx, NY</p>
-          <p><strong>Hours:</strong> Tue–Sun 11am–5pm</p>
+        <div class="location-card mb-4 p-3 rounded shadow-sm bg-light" data-borough="bronx">
+          <h3>Bronx</h3>
+          <ul>
+            <li><strong>Bronx Tails Cat Rescue</strong><br>Bronx, NY 10458</li>
+            <li><strong>NYCACC Bronx Shelter</strong><br>464 E Fordham Rd, Bronx, NY 10458</li>
+          </ul>
         </div>
-
-        <div class="location-card">
-          <h2>Rescues in Staten Island</h2>
-          <p><strong>Location:</strong> 654 Safe Haven Dr, Staten Island, NY</p>
-          <p><strong>Hours:</strong> Mon–Fri 12pm–6pm</p>
+        <div class="location-card mb-4 p-3 rounded shadow-sm bg-light" data-borough="staten">
+          <h3>Staten Island</h3>
+          <ul>
+            <li><strong>Staten Island Hope Animal Rescue</strong><br>654 Safe Haven Dr, Staten Island, NY 10312</li>
+            <li><strong>Louie's Legacy Animal Rescue</strong><br>Staten Island, NY 10301</li>
+          </ul>
         </div>
       </div>
 
-     
-      <div class="col-md-4 map-col">
+      <div class="col-md-4">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d81457.32474598786!2d-73.99533730326796!3d40.648051862186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAnimal%20rescues%20in%20Brooklyn!5e0!3m2!1sen!2sus!4v1750100535915!5m2!1sen!2sus"
-          width="100%"
-          height="500"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
 
-  
+  <footer class="bg-dark text-light text-center py-3">
+    <small>&copy; 2025 Rescue NYC. All rights reserved. | <a href="mailto:contact@rescuenyc.org" class="text-light text-decoration-underline">Email Us</a></small>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("themeToggle");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+
+      function setTheme(mode) {
+        document.body.classList.toggle("dark-mode", mode === "dark");
+        localStorage.setItem("theme", mode);
+      }
+
+      const savedTheme = localStorage.getItem("theme") || "light";
+      setTheme(savedTheme);
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          const newTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+          setTheme(newTheme);
+        });
+      }
+
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach(btn => btn.classList.remove("active"));
+          button.classList.add("active");
+          const filter = button.getAttribute("data-filter");
+          document.querySelectorAll(".location-card").forEach(card => {
+            const borough = card.getAttribute("data-borough");
+            card.style.display = (filter === "all" || borough === filter) ? "block" : "none";
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
